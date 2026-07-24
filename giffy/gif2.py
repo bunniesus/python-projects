@@ -15,6 +15,7 @@ frames[0].save(
 )
 print("Gif created successfully ! Check dancingcroc.gif")
 
+#check if the dimensions are equal of frames
 # import numpy as np
 # img1 = iio.imread("frame_00_delay-0.1s.png")
 # img2 = iio.imread("frame_01_delay-0.1s.png")
