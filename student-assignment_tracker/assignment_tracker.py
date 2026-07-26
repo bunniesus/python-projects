@@ -29,14 +29,15 @@ def ViewAssignment():
     if not assignments:
         print("No assignments..")
     else:
-        for index, assignment in enumerate(assignments, start=1):
-            print(f"{index} .")
-            print(f"Subject:  {assignment['Subject']}")
-            print(f"Title:    {assignment['Title']}")
-            print(f"Due Date: {assignment['Due Date']}")
-            print(f"Priority: {assignment['Priority']}")
-            print(f"Status:   {assignment['Status']}")
-            print("----------------------")
+        for index in range(len(assignments)):
+            assignment = assignments[i]
+            print(f"\nAssignment {index+1}")
+            print("Subject:", assignment["Subject"])
+            print("Title:", assignment["Title"])
+            print("Due Date:", assignment["Due Date"])
+            print("Priority:", assignment["Priority"])
+            print("Status:", assignment["Status"])
+            print("-------------------------")
 
 def MarkComplete():
     print("Current assignments ---")
@@ -55,9 +56,6 @@ def MarkComplete():
         print("❌ Invalid assignment number.")
 
 
-       
-
-            
 
 while True:
     PrintMenu()
