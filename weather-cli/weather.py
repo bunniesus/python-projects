@@ -1,13 +1,20 @@
-def getCoordinates(city):
+import requests #library to send HTTPS reqs 
 
-    return latitude, longitude
+def getCoordinates(city):
     pass
 
 def getWeather(latitude, longitude):
     pass
 
 def displayWeather(weather):  # doesn't create weather onnly displays it
-    pass
+
+    print("\nToday's Weather " )
+    print("City: ", weather["city"])
+    print("Temperature: ", weather["temperature"])
+    print("Humidity: ", weather["humidity"])
+    print("Wind: ", weather["wind"])
+    print("Condition: ", weather["condition"])
+
 
 def main():
     city = input("Enter city: ")
