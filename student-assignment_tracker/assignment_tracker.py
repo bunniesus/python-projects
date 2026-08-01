@@ -30,7 +30,7 @@ def ViewAssignment():
         print("No assignments..")
     else:
         for index in range(len(assignments)):
-            assignment = assignments[i]
+            assignment = assignments[index]
             print(f"\nAssignment {index+1}")
             print("Subject:", assignment["Subject"])
             print("Title:", assignment["Title"])
@@ -77,6 +77,7 @@ while True:
         print("Invalid Option ..")
 
 #Try Switcher
+# Delete Assignment option
 
 
 

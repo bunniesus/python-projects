@@ -1,0 +1,7 @@
+#     View Assignment
+#            ↓
+# If assignment list is empty
+#       print "No assignments"
+# Else
+#       Loop through every assignment
+#              Print Subject
