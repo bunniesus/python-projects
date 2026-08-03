@@ -1,5 +1,4 @@
-import requests 
-#library to send HTTPS reqs 
+import requests  #library to send HTTPS reqs 
 
 def getCoordinates(city):
 
@@ -58,7 +57,6 @@ def weatherCodeToText(code):
 
     return weather_codes.get(code, "Unknown")
 
-
 def main():
     city = input("Enter city: ")
 
@@ -74,4 +72,18 @@ def main():
 
     displayWeather(weather)
 
-main()
+def Menu():
+    print("1. Select another city"
+        "\n2. Exit")
+    
+while True:
+    main()
+    Menu()
+    choice = int(input("Choose an option : "))
+    if choice == 1:
+        pass
+    elif choice == 2:
+        print("Exiting... ")
+        break
+    else : 
+        print("Invalid choice!")
