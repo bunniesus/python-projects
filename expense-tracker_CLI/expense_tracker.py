@@ -1,13 +1,42 @@
-expenses = []
+Expenses = []
 
 def addExpense():
-    print("Add")
+
+    date = input("Enter date: ")
+    amount = float(input("Enter Amount: "))
+    category = input("Enter category: ")
+    description = input("Write description: ")
+
+    expense = {
+        "date" : date,
+        "amount" : amount,
+        "category" : category,
+        "description" : description
+    }
+    Expenses.append(expense)
+    print("Expense added Successfully!\n")
+    
 
 def viewExpenses():
-    print("Hello")
+
+    if not Expenses:
+        print("No data added!")
+    else:
+        for i in range (len(Expenses)):
+            expense = Expenses[i]
+            print("----------- Expenses ------------")
+            print(f"\n{i + 1} ."    )
+            print("DATE : ", expense['date'])
+            print("AMOUNT : ", expense['amount'])
+            print("CATEGORY : ", expense['category'])
+            print("DESCRIPTION : ", expense['description'])
+            print("-------------------------")
+
 
 def menu():
     
+
+    print("\n------ Expense Tracker ------")
 
     while True:
         print("1.Add Expense" 
@@ -27,9 +56,8 @@ def menu():
             print("\nInvalid choice! Try again")
 
 def main():
-
-    print("\n------ Expense Tracker ------")
     
     menu()
+
 
 main()
