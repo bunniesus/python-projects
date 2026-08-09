@@ -57,5 +57,5 @@ More projects coming as I learn new concepts.
 less go!
 <br>
 <div align = "center">
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXZ3OXFzY3NqYjkyNTgybGJjYXU4YTEzY2d1eDZiZmE1MXZmY2YxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dTeeo2Jy3TpK/giphy.gif" height="100" /> </div>
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXZ3OXFzY3NqYjkyNTgybGJjYXU4YTEzY2d1eDZiZmE1MXZmY2YxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dTeeo2Jy3TpK/giphy.gif" height="150" /> </div>
 <br>
