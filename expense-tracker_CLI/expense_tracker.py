@@ -1,11 +1,15 @@
+import json 
+
 Expenses = []
 
 def addExpense():
 
-    date = input("Enter date: ")
-    amount = float(input("Enter Amount: "))
-    category = input("Enter category: ")
-    description = input("Write description: ")
+    
+    print("╭────────── ADD EXPENSE ──────────╮\n")
+    date = input("Date (DD-MM-YYYY): ")
+    amount = float(input("Amount (₹): "))
+    category = input("Category: ")
+    description = input("Description: ")
 
     expense = {
         "date" : date,
@@ -13,50 +17,71 @@ def addExpense():
         "category" : category,
         "description" : description
     }
+
     Expenses.append(expense)
-    print("Expense added Successfully!\n")
-    
+
+    print("✅ Expense added Successfully!\n")
+    print("╰─────────────────────────────────╯")
+    saveExpenses()
+
+
+def loadExpenses():
+    with open("expense-tracker_CLI/expenses.json", "r") as file_pointer:
+        loaded_expenses = json.load(file_pointer)
+    return loaded_expenses
+
+def saveExpenses():
+    with open("expense-tracker_CLI/expenses.json", "w") as file_pointer:
+        json.dump(Expenses, file_pointer, indent = 2)
 
 def viewExpenses():
 
     if not Expenses:
         print("No data added!")
     else:
-        for i in range (len(Expenses)):
+        for i in range (len(Expenses)):  # can be -- for i, expense in enumerate(Expenses):
+            
             expense = Expenses[i]
-            print("----------- Expenses ------------")
-            print(f"\n{i + 1} ."    )
-            print("DATE : ", expense['date'])
-            print("AMOUNT : ", expense['amount'])
-            print("CATEGORY : ", expense['category'])
-            print("DESCRIPTION : ", expense['description'])
-            print("-------------------------")
+            print("\n╭──────────── YOUR EXPENSES ────────────╮")
 
+            print(f"\n #{i + 1} "    )
+            print(f"  📅 Date        : {expense['date']}")
+            print(f"  💰 Amount      : ₹{expense['amount']:.2f}")
+            print(f"  🏷️ Category     : {expense['category']}")
+            print(f"  📝 Description : {expense['description']}")
+
+            print("\n╰───────────────────────────────────────╯")
 
 def menu():
-    
 
-    print("\n------ Expense Tracker ------")
+    print("\n╭───────────────────────────────────────╮")
+    print("|             EXPENSE TRACKER           |")
+    print("╰───────────────────────────────────────╯")
 
     while True:
-        print("1.Add Expense" 
+        print("1. Add Expense" 
             "\n2. View Expenses" 
-            "\n3. Exit")
+            "\n3. Monthly Summary"
+            "\n4. Exit")
             
-        choice = int(input("Choose an option: "))
+        choice = int(input("\nChoose an option: "))
         
         if choice == 1:
             addExpense()
         elif choice == 2:
             viewExpenses()
         elif choice == 3:
+            pass
+        elif choice == 4:
             print("Exiting.. ")
             break
         else:
             print("\nInvalid choice! Try again")
 
 def main():
-    
+
+    global Expenses
+    Expenses = loadExpenses()
     menu()
 
 

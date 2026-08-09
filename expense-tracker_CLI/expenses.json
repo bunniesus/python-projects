@@ -1,0 +1,20 @@
+[
+  {
+    "date": "02-08-2026",
+    "amount": 5200.0,
+    "category": "Shopping",
+    "description": "Grocery"
+  },
+  {
+    "date": "07-08-2026",
+    "amount": 570.0,
+    "category": "Food",
+    "description": "Dinner"
+  },
+  {
+    "date": "08-08-2026",
+    "amount": 8000.0,
+    "category": "Rent",
+    "description": "August rent"
+  }
+]
