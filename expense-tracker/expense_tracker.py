@@ -26,12 +26,12 @@ def addExpense():
 
 
 def loadExpenses():
-    with open("expense-tracker_CLI/expenses.json", "r") as file_pointer:
+    with open("expense-tracker/expenses.json", "r") as file_pointer:
         loaded_expenses = json.load(file_pointer)
     return loaded_expenses
 
 def saveExpenses():
-    with open("expense-tracker_CLI/expenses.json", "w") as file_pointer:
+    with open("expense-tracker/expenses.json", "w") as file_pointer:
         json.dump(Expenses, file_pointer, indent = 2)
 
 def viewExpenses():
@@ -52,6 +52,15 @@ def viewExpenses():
 
             print("\n╰───────────────────────────────────────╯")
 
+def monthlySummary() :
+    total = 0
+
+    for expense in Expenses:
+        total += expense["amount"]
+
+        print("Total expenses: ", total)
+
+
 def menu():
 
     print("\n╭───────────────────────────────────────╮")
@@ -71,7 +80,8 @@ def menu():
         elif choice == 2:
             viewExpenses()
         elif choice == 3:
-            pass
+            monthlySummary()
+            print("\n")
         elif choice == 4:
             print("Exiting.. ")
             break
