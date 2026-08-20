@@ -16,5 +16,11 @@
     "amount": 8000.0,
     "category": "Rent",
     "description": "August rent"
+  },
+  {
+    "date": "28-08-2026",
+    "amount": 12500.0,
+    "category": "Shopping",
+    "description": "Grocery & Pantry"
   }
 ]
