@@ -53,6 +53,10 @@ def viewExpenses():
             print("\n╰───────────────────────────────────────╯")
 
 def monthlySummary() :
+    if not Expenses:
+        print("No expenses to summarize.")
+        return
+    
     total = 0
     category_totals = {}
 
@@ -68,13 +72,21 @@ def monthlySummary() :
     # PRINT RESULTS
     print("\n╭──────────── MONTHLY SUMMARY ────────────╮")
     print(f"  💰 Total Spent      : ₹{total:.2f}")
-    print("\n  🏷️ Category Breakdown     ")
+    print("\n  🏷️  Category Breakdown     ")
 
     for category in category_totals:
         print(f"  {category: <15} : ₹{category_totals[category]: .2f}")
 
-    print("\n╰───────────────────────────────────────╯")
+    #Find highest amount
+    highest = max(Expenses, key=lambda expense: expense["amount"])
 
+    print("\n 📈 Highest Expense")
+    print(f"  Amount      : ₹{highest['amount']:.2f}")
+    print(f"  Category    : {highest['category']}")
+    print(f"  Description : {highest['description']}")
+    print(f"  Date        : {highest['date']}")
+
+    print("\n╰───────────────────────────────────────╯")
 
 
 
@@ -107,13 +119,7 @@ def menu():
 
 def main():
 
-
-
     global Expenses
-
-    highest = max(Expenses, key=lambda expense: expense["amount"])
-    print(highest)
-
     Expenses = loadExpenses()
     menu()
 
