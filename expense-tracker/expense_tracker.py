@@ -56,7 +56,7 @@ def monthlySummary() :
     total = 0
     category_totals = {}
 
-    #PROCESS DATA
+    # PROCESS DATA
     for expense in Expenses:
         total += expense["amount"]
 
@@ -65,15 +65,17 @@ def monthlySummary() :
         else: 
             category_totals[expense["category"]] =  expense["amount"] 
 
-    #PRINT RESULTS
+    # PRINT RESULTS
     print("\n╭──────────── MONTHLY SUMMARY ────────────╮")
-    print(f"  💰 Total Spent      : ₹{total: .2f}")
+    print(f"  💰 Total Spent      : ₹{total:.2f}")
     print("\n  🏷️ Category Breakdown     ")
 
     for category in category_totals:
         print(f"  {category: <15} : ₹{category_totals[category]: .2f}")
 
     print("\n╰───────────────────────────────────────╯")
+
+
 
 
 def menu():
@@ -105,7 +107,13 @@ def menu():
 
 def main():
 
+
+
     global Expenses
+
+    highest = max(Expenses, key=lambda expense: expense["amount"])
+    print(highest)
+
     Expenses = loadExpenses()
     menu()
 
