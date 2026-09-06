@@ -3,7 +3,6 @@ import json
 Expenses = []
 
 def addExpense():
-
     
     print("╭────────── ADD EXPENSE ──────────╮\n")
     date = input("Date (DD-MM-YYYY): ")
@@ -23,7 +22,6 @@ def addExpense():
     print("✅ Expense added Successfully!\n")
     print("╰─────────────────────────────────╯")
     saveExpenses()
-
 
 def loadExpenses():
     with open("expense-tracker/expenses.json", "r") as file_pointer:
@@ -85,9 +83,7 @@ def monthlySummary() :
     print(f"  Category    : {highest['category']}")
     print(f"  Description : {highest['description']}")
     print(f"  Date        : {highest['date']}")
-
     print("\n╰───────────────────────────────────────╯")
-
 
 
 def menu():
@@ -122,6 +118,5 @@ def main():
     global Expenses
     Expenses = loadExpenses()
     menu()
-
 
 main()
