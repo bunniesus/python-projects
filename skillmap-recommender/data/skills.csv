@@ -1,0 +1,19 @@
+skill,category,difficulty,prerequisite,goal
+Python,Programming,Beginner,None,AI/ML
+NumPy,Data Science,Beginner,Python,AI/ML
+Pandas,Data Science,Beginner,Python,AI/ML
+Matplotlib,Data Visualization,Beginner,Python,AI/ML
+Statistics,Mathematics,Intermediate,Basic Mathematics,AI/ML
+Linear Algebra,Mathematics,Intermediate,Basic Mathematics,AI/ML
+Scikit-learn,Machine Learning,Intermediate,"Python;NumPy;Pandas",AI/ML
+Machine Learning,Machine Learning,Intermediate,"Python;Statistics;NumPy;Pandas",AI/ML
+Deep Learning,AI,Advanced,"Python;Machine Learning;Linear Algebra",AI/ML
+NLP,AI,Intermediate,"Python;Machine Learning",AI/ML
+SQL,Database,Beginner,None,Data Science
+Git,Development,Beginner,None,Software Development
+HTML/CSS,Web Development,Beginner,None,Web Development
+JavaScript,Web Development,Intermediate,HTML/CSS,Web Development
+Flask,Web Development,Intermediate,Python,Web Development
+UI/UX Design,Design,Beginner,None,Design
+Figma,Design,Beginner,None,Design
+Computer Vision,AI,Intermediate,"Python;Machine Learning",AI/ML
